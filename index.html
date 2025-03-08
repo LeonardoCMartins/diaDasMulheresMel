@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homenagem para Minha Namorada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 contenteditable="true">Feliz Dia das Mulheres, Meu Amor! 💖</h1>
+        
+        <p>Você é uma mulher incrível, linda, perfeita, inteligente, preciosa e cheia de luz. Sou grato por cada momento ao seu lado e por tudo que você é. Eu te amo momo! ❤️</p>
+        
+        <h2 contenteditable="true">A namorada mais incrível do mundo</h2>
+        <div class="carrossel">
+            <div class="slides">
+                <div class="slide"><img src="carrossel/17ca63e7-d9f7-40eb-aa43-aee880ee849e.jfif" alt="Imagem 1"></div>
+                <div class="slide"><img src="carrossel/336fccd3-07ff-4a05-82e5-dca39ca66c3e.jfif" alt="Imagem 2"></div>
+                <div class="slide"><img src="carrossel/4ee49bcc-00dc-4f8d-b09b-a8bc45163b69.jfif" alt="Imagem 3"></div>
+                <div class="slide"><img src="carrossel/65f05827-95a0-4482-9134-f2a1f74f5a2c.jfif" alt="Imagem 1"></div>
+                <div class="slide"><img src="carrossel/7a6687da-c107-47c8-a3d8-e350ede5637b.jfif" alt="Imagem 2"></div>
+                <div class="slide"><img src="carrossel/c60832ae-1b80-4cd6-888b-4b5d7a7c49c6.jfif" alt="Imagem 3"></div>
+            </div>
+        </div>
+
+
+        <div class="photo-container">
+            <h2>Nós muitos lindos fofos juntos, amo nós</h2>
+            <div class="grid-container">
+                <div class="grid-item"><img id="photo1" src="photos/1c2875c9-4f17-49d4-bd52-9b42983e22cd.jfif" alt="Foto 1"></div>
+                <div class="grid-item"><img id="photo2" src="photos/1d3713ec-a9fa-40a4-aa16-aa7af3d5dc28.jfif" alt="Foto 2"></div>
+                <div class="grid-item"><img id="photo3" src="photos/2e6665f0-388c-43ea-9b8f-9b820346c81f.jfif" alt="Foto 3"></div>
+                <div class="grid-item"><img id="photo4" src="photos/3ff0e160-9126-4867-a472-39228a4483f3.jfif" alt="Foto 4"></div>
+                <div class="grid-item"><img id="photo5" src="photos/46104d63-1e10-4287-a4cf-0aa58e7c2428.jfif" alt="Foto 5"></div>
+                <div class="grid-item"><img id="photo6" src="photos/77c415b9-e5b8-4edd-a70a-52e7db07bff1.jfif" alt="Foto 6"></div>
+                <div class="grid-item"><img id="photo7" src="photos/99a34cd2-d435-4072-90e0-15bb52161a12.jfif" alt="Foto 7"></div>
+                <div class="grid-item"><img id="photo8" src="photos/cb68ebd6-1030-42f5-8e4d-3898a25a12f0.jfif" alt="Foto 8"></div>
+            </div>
+        </div>
+        
+        
+        <h2 contenteditable="true">Músicas muito nós</h2>
+        <iframe id="music" width="300" height="150" src="https://www.youtube.com/embed/-rPELr52aUY?si=REAgKtMAsO_ciAsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div>
+            <a target="_blank" class="secretButton" href="https://www.youtube.com/watch?v=YQ404vwjzus&ab_channel=PedroMirandaFilho">Botão Secreto!</a>
+        </div>
+
+        <h2 contenteditable="true">EU TE AMO DEMAIS AMOR</h2>
+        <p>Desculpa todos os erros, esquecimentos, bobeiras, etc, eu só quero ser um namorado melhor para você e crescer junto com você para sermos um casal incrivel, quero dividir minha vida com você. EU TE AMO MINHA MENINA MEL💗</p>
+        
+        <h1>💖 Clique no botão momo! 💖</h1>
+        <p class="aviso">Aperte o botão várias vezes!!!</p>
+        <button class="buttonTeamo" onclick="mostrarMensagem()">Eu te amo! ❤️</button>
+        <p id="mensagem"></p>
+    </div>
+
+    <script>
+        let indice = 0;
+        const slides = document.querySelector(".slides");
+
+        function mudarSlide(direcao) {
+            const totalSlides = document.querySelectorAll(".slide").length;
+            indice = (indice + direcao + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(${-indice * 100}%)`;
+        }
+
+        function autoSlide() {
+            mudarSlide(1);
+        }
+
+        setInterval(autoSlide, 2000); 
+
+
+        function mostrarMensagem() {
+            const mensagens = [
+                "Você é a melhor parte dos meus dias! 💖",
+                "Você é meu mundo, minha sorte, minha melmel! 🌎✨💗",
+                "Cada momento com você é especial! 🥰",
+                "Eu te amo mais do que tudo minha princesa! 😍",
+                "Eu sou todo seu amor! 💗",
+                "Espero passar o resto da minha vida com você minha mulher! 🌸",
+                "Você é a mulher com que vou me casar! 💍"
+            ];
+            
+            const mensagemAleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
+            
+            document.getElementById("mensagem").textContent = mensagemAleatoria;
+        }
+    </script>
+</body>
+</html>
